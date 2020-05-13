@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="BannerCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="BannerCell" id="KGk-i7-Jjw" customClass="BannerCell" customModule="BannerInTableView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="LSP-Pw-Z0L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="375" id="Yb2-4j-YSy"/>
+                            <constraint firstAttribute="height" constant="100" id="f7x-xg-arl"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GHO-Di-P2D">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="KGk-i7-Jjw" id="USb-6q-2jr"/>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="asu-2A-9yU"/>
+                        </connections>
+                    </collectionView>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Rkx-KX-J9u">
+                        <rect key="frame" x="168" y="62" width="39" height="37"/>
+                    </pageControl>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Rkx-KX-J9u" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="5Kp-8O-XLd"/>
+                    <constraint firstItem="LSP-Pw-Z0L" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Eh7-Zh-LGj"/>
+                    <constraint firstAttribute="bottom" secondItem="LSP-Pw-Z0L" secondAttribute="bottom" id="M3G-6G-mAb"/>
+                    <constraint firstAttribute="bottom" secondItem="Rkx-KX-J9u" secondAttribute="bottom" constant="1" id="sqJ-hB-jK1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="collectionView" destination="LSP-Pw-Z0L" id="ikk-CR-aTq"/>
+                <outlet property="collectionViewHeight" destination="f7x-xg-arl" id="x7r-GW-MQT"/>
+                <outlet property="collectionViewLayout" destination="GHO-Di-P2D" id="9io-yV-HTS"/>
+                <outlet property="collectionViewWidth" destination="Yb2-4j-YSy" id="TMy-E8-oZn"/>
+                <outlet property="pageIndicator" destination="Rkx-KX-J9u" id="mWU-p2-5Iq"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
+        </tableViewCell>
+    </objects>
+</document>
